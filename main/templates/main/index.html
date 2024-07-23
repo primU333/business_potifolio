@@ -1,0 +1,859 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>{{name}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Revenue Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="{% static "main/css/bootstrap.css" %}" type="text/css" rel="stylesheet" media="all">
+    <!-- products smoothbox -->
+    <link rel="stylesheet" href="{% static "main/css/smoothbox.css" %}" type='text/css' media="all" />
+    <!-- team deoslide -->
+    <link rel="stylesheet" href="{% static "main/css/jquery.desoslide.css" %}">
+    <link href="{% static "main/css/style.css" %}" type="text/css" rel="stylesheet" media="all">
+    <link href="{% static "main/css/font-awesome.css" %}" rel="stylesheet">
+    <!-- font-awesome icons -->
+    <!-- //Custom Theme files -->
+    <!-- web-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <!-- //web-fonts -->
+</head>
+
+<body>
+    <div class="top-nav" style="position: fixed; z-index: 1000; background-color: white; width: 100%;">
+        <!--nav top-->
+        <div class="container">
+
+            <div class="navbar-top">
+                <div class="nav-top-left" style="display: none;">
+                    <ul>
+                        <li>
+                            <a href="#" class="log" data-toggle="modal" data-target="#myModal">Login</a>
+                        </li>
+                        <li>
+                            <a href="#" class="log" data-toggle="modal" data-target="#myModal">register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-top-right">
+                    <ul>
+                        <li><a href="tel:{{business.business_phone}}"><i class="fa fa-phone" aria-hidden="true"></i> {{business.business_phone}}</a> </li>
+                        <li><a href="mailto:{{business.business_email}}"><i class="fa fa-whatsapp" aria-hidden="true"></i> {{business.business_whatsapp_no}} </a> </li> 
+                        <li style="margin-left: 10px;"><a href="mailto:{{business.business_email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{business.business_email}}</a> </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- nav-bottom -->
+        <div class="inner-header">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1>
+                        <a href="{% url 'home' %}">
+                            {{name}}</a>
+                    </h1>
+                </div>
+                <!-- navbar-header -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="scroll">About</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="scroll">Services</a>
+                        </li>
+                        <li>
+                            <a href="#products" class="scroll">Products</a>
+                        </li>
+                        <li>
+                            <a href="#team" class="scroll">Team</a>
+                        </li>
+                        <li>
+                            <a href="#testimonials" class="scroll">Clients</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="scroll">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </nav>
+        </div>
+    </div>
+    <!--/nav ends here-->
+
+    <!-- main content start -->
+    <div class="main-container">
+
+        <!-- banner -->
+        <div class="banner">
+            <div class="banner-right">
+                <img src="{{info.banner_image.url}}" alt="" class="img-responsive" />
+            </div>
+            <div class="banner-text">
+                <div id="top" class="callbacks_container">
+                    <ul class="rslides" id="slider3">
+                        <li>
+                            <div class="banner-textagileinfo">
+                                <h6>{{info.banner_heading_1}}</h6>
+                                <h3>{{info.banner_subheading_heading_1}}</h3>
+                                <p>{{info.banner_description_1}}</p>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-textagileinfo">
+                                <h6>{{info.banner_heading_2}}</h6>
+                                <h3>{{info.banner_subheading_heading_2}}</h3>
+                                <p>{{info.banner_subheading_heading_2}}</p>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-textagileinfo">
+                                <h6>{{info.banner_subheading_heading_3}}</h6>
+                                <h3>{{info.banner_subheading_heading_3}}</h3>
+                                <p>{{info.banner_subheading_heading_3}}</p>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+        <!-- //banner -->
+        <!--about -->
+        <div id="about" class="section">
+            <h3 class="title-txt">
+                <span>a</span>bout {{name}}</h3>
+            <div class="abt-container">
+                <fieldset>
+                    <legend>Building the Finest Quality Businesses.</legend>
+                    <div class="stats-info">
+                        <div class="col-sm-3 col-xs-3 stats-grid">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='{{info.products_count}}' data-delay='.5' data-increment="1">{{info.products_count}}</div>
+                            <div class="stats-img stat2">
+                                <p>Products</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 stats-grid">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='{{info.clients_count}}' data-delay='.5' data-increment="1">{{info.clients_count}}</div>
+                            <div class="stats-img stat2">
+                                <p>Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 stats-grid stat1">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='{{info.patners_count}}' data-delay='.5' data-increment="1">{{info.patners_count}}</div>
+                            <div class="stats-img stat2">
+                                <p>Patners</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 stats-grid stat1">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='{{info.users_count}}' data-delay='.5' data-increment="1">{{info.users_count}}</div>
+                            <div class="stats-img stat2">
+                                <p>Users</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="abt-pos">
+                        <div class="col-md-6  about-left">
+                            <h3 class="title">{{info.about_us_sub_heading}}</h3>
+                            <p class="about-bottom">{{info.about_us_description}} </p>
+                            
+                            <a href="#services" class="abtlink scroll">read more</a>
+
+                            <img src="#" class="img-responsive" alt="" />
+                        </div>
+                        <div class="col-md-6 s-row">
+                            <img src="{{info.about_us_image.url}}" class="img-responsive" alt="" />
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <!-- //about -->
+        <!-- services -->
+        <div class="services section" id="services">
+            <div class="container2">
+                <h3 class="title-txt">
+                    <span>s</span>ervices</h3>
+                <h5>we offer products and services for your
+                    <span>personal</span> and
+                    <span>professional business</span> needs.</h5>
+                <div class="col-md-5 service-left-grid">
+                    <div class="services-left">
+
+                        <h4> Lorem ipsum dolor sit amet,
+                            <span>consectetur adipisicing elit, sed do</span> sit amet conse eiusmod. </h4>
+                        <p> Taque earum rerum hic tenetur a sapiente delectus. Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do sit amet conse eiusmod. taque earum rerum hic tenetur a sapiente delectus </p>
+                        <ul class="serv-list">
+                            <li>
+                                <a href="#products" class="abtlink scroll">view more</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="abtlink scroll">contact us</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-md-7 text-center agileinfo-about-grid">
+                    <div class="col-md-4 col-xs-4 service-subgrids">
+                        <div class="s-about-grid">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            <h6>Wesites</h6>
+                            <p> Taque earum rerum hitaque tenetur rum sapiente</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-4 service-subgrids">
+                        <div class="s-about-grid">
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                            <h6>Marketing</h6>
+                            <p> Taque earum rerum hitaque tenetur rum sapiente</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-4 service-subgrids">
+                        <div class="s-about-grid">
+                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            <h6>Branding</h6>
+                            <p> Taque earum rerum hitaque tenetur rum sapiente</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-4 service-subgrids">
+                        <div class="s-about-grid">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            <h6>Tech Support</h6>
+                            <p> Taque earum rerum hitaque tenetur rum sapiente</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-4 service-subgrids">
+                        <div class="s-about-grid">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <h6>E-commerce</h6>
+                            <p> Taque earum rerum hitaque tenetur rum sapiente</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-4 service-subgrids">
+                        <div class="s-about-grid">
+                            <i class="fa fa-inbox" aria-hidden="true"></i>
+                            <h6>Communication</h6>
+                            <p> Taque earum rerum hitaque tenetur rum sapiente</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+        <!-- //services -->
+        <!--about manager -->
+        <div class="section manager" id="manger">
+            <div class="container">
+                <h3 class="title-txt">
+                    <span>Who</span>we are</h3>
+                <div class="about-main">
+                    <div class="col-md-4 man-grid2">
+                        <h5>{{info.who_we_are_sub_heading}}</h5>
+                        <p class="about-text-">{{info.who_we_are_description}}</p>
+                        <img src="{{info.who_we_are_image.url}}" alt="" class="img-responsive" />
+                        
+                    </div>
+                    <div class="col-md-8 man-right">
+                    <div class="col-md-5 col-sm-5 man-grid">
+                        <ul>
+                            <li>
+                                <i class="fa fa-square" aria-hidden="true"></i>Mission
+                                <p>{{business.mission}}</p>
+                            </li>
+                            <li>
+                                <i class="fa fa-square" aria-hidden="true"></i>Vision
+                                <p>{{business.vision}}</p>
+                            </li>
+
+                           
+
+                        </ul>
+                    </div>
+                    <div class="s-about-right col-md-7 col-sm-7">
+                        <img class="img-responsive" src="{{info.who_we_are_image.url}}" alt="about-image" />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- //about manager -->
+        <!-- faq -->
+        <div class="section faq">
+            <div class="container">
+                <h3 class="title-txt text-center">
+                    <span>F</span>AQs</h3>
+
+                <div class="faq-info">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#testi" aria-controls="testi" role="tab" data-toggle="tab">Websites</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Marketing</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Branding</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#tab4" aria-controls="messages" role="tab" data-toggle="tab">Support</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#tab5" aria-controls="messages" role="tab" data-toggle="tab">E-commerce</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="testi">
+                            <div class="faqmain-info">
+                                <div class="faq-subinfo">
+                                    {% for faq in faqs %}
+                                        {% if faq.category == 'Websites' %}
+                                        <div class="col-md-6  latest-grid">
+                                            <div class="faq-left">
+                                                <h5>
+                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> {{faq.question}}</h5>
+                                                <p>{{faq.answer}}</p>
+                                            </div>
+
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <div class="faqmain-info">
+                                <div class="faq-subinfo">
+                                    {% for faq in faqs %}
+                                        {% if faq.category == 'Marketing' %}
+                                        <div class="col-md-6  latest-grid">
+                                            <div class="faq-left">
+                                                <h5>
+                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> {{faq.question}}</h5>
+                                                <p>{{faq.answer}}</p>
+                                            </div>
+
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages">
+                            <div class="faqmain-info">
+                                <div class="faq-subinfo">
+                                    {% for faq in faqs %}
+                                        {% if faq.category == 'Branding' %}
+                                        <div class="col-md-6  latest-grid">
+                                            <div class="faq-left">
+                                                <h5>
+                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> {{faq.question}}</h5>
+                                                <p>{{faq.answer}}</p>
+                                            </div>
+
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                    
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tab4">
+                            <div class="faqmain-info">
+                                <div class="faq-subinfo">
+                                    {% for faq in faqs %}
+                                        {% if faq.category == 'E-Commerce' %}
+                                        <div class="col-md-6  latest-grid">
+                                            <div class="faq-left">
+                                                <h5>
+                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> {{faq.question}}</h5>
+                                                <p>{{faq.answer}}</p>
+                                            </div>
+
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                   
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="tab5">
+                            <div class="faqmain-info">
+                                <div class="faq-subinfo">
+                                    {% for faq in faqs %}
+                                        {% if faq.category == 'Support' %}
+                                        <div class="col-md-6  latest-grid">
+                                            <div class="faq-left">
+                                                <h5>
+                                                    <i class="fa fa-question-circle" aria-hidden="true"></i> {{faq.question}}</h5>
+                                                <p>{{faq.answer}}</p>
+                                            </div>
+
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                    
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //faq -->
+        <!-- products -->
+        <div class="jarallax section products" id="products">
+            <div class="container">
+                <div class="s-title">
+                    <h3 class="title-txt">
+                        <span>P</span>roducts</h3>
+                </div>
+                <div class="s_products_grids">
+                    {% for product in products %}
+                    <div class="col-xs-4 agileits_ayouts_products_grid">
+
+                        <div class="agileits_ayouts_products_grid1 ayouts_products_grid1 hover14 column">
+                            <div class="agile_products_effect">
+                                <a href="{{product.image.url}}" class="sb" title="{{product.description}}">
+                                    <h4>{{product.title}}</h4>
+                                    <figure>
+                                        <img src="{{product.image.url}}" alt=" " class="img-responsive" />
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    {% endfor %}
+                    
+                    <div class="clearfix"> </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- //products -->
+        <!-- team -->
+        <div class="team section" id="team">
+            <div class="container">
+                <h3 class="title-txt">
+                    <span>{{name}}'s T</span>eam</h3>
+                <div class="new-agileinfo">
+                    <div class="col-md-4 col-xs-5 team-left">
+                        <ul id="demo1_thumbs" class="list-inline">
+                            {% for member in team %}
+                            <li>
+                                <a href="{{member.photo.url}}">
+                                    <img src="{{member.photo.url}}" alt="" data-desoslide-caption="<h3>{{member.name}}a</h3>  {{member.description}}">
+                                    <div class="team-text">
+                                        <h4>{{member.name}}</h4>
+                                        <p>{{member.position}}</p>
+                                    </div>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div id="demo1_main_image" class="col-md-8 col-xs-7 team-right"></div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- //team -->
+        <!-- testimonials -->
+        <div class="testimonials section" id="testimonials">
+            <div class="container">
+                <h3 class="title-txt">
+                    <span>T</span>estimonials</h3>
+                <ul id="flexiselDemo1">
+                    {% for test in tests %}
+                        <li>
+                            <div class="wthree_testimonials_grid_main">
+                                <div class="col-md-6 col-xs-6 wthree_testimonials_grid">
+                                    <p>
+                                        <img src="images/left-quote.png" alt=" ">{{test.testimony}}
+                                        <img src="images/right-quote.png" alt=" ">
+                                    </p>
+                                </div>
+                                <div class="col-md-6 col-xs-6 wthree_testimonials_grid_pos">
+                                    <div class="col-md-5 col-xs-5 grid-test-">
+                                        <img src="{{test.testifier_image.url}}" alt=" " class="img-responsive" />
+                                    </div>
+                                    <div class="col-md-7 col-xs-7 wthree_testimonials_grid1">
+                                        <h5>{{test.testifier_name}}</h5>
+                                        <p>{{test.testifier_category}}</p>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <!-- //testimonials -->
+        <!-- contact -->
+        <div class="contact-main section" id="contact">
+            <div class="container">
+                <h3 class="title-txt">
+                    <span>c</span>ontact us</h3>
+                <div class="col-md-4 contact-leftgrid">
+                    <div class="contact-g1">
+                        <h6>Get In Touch</h6>
+                        <ul class="address">
+                            <li>
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                <a href="tel:{{business.business_phone}}"> {{business.business_phone}}</a>
+
+                            </li>
+                            <li>
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <a href="mailto:{{business.business_email}}"> {{business.business_email}}</a>
+                            </li>
+                            <li>
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                {{business.business_physical_address}}
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8 contact-center">
+                    <div class="col-md-4 contact-g2">
+                        <h6>Follow us</h6>
+                        <div class="address-grid">
+
+                            <ul class="social-icons3">
+
+                                <li>
+                                    <a href="{{business.facebook_profile_url}}" class="s-iconfacebook">
+                                        <span class="fa fa-facebook" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{business.twitter_profile_url}}" class="s-icontwitter">
+                                        <span class="fa fa-twitter" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{business.instagram_profile_url}}" class="s-icondribbble">
+                                        <span class="fa fa-instagram aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="s-iconbehance">
+                                        <span class="fa fa-whatsapp aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8 contact-g3">
+                        <div class="subscribe-grid ">
+                            <p>subscribe To receive helpful articles, customer alerts,services & more.</p>
+
+                            <form action="#" method="post">
+                                <input type="email" placeholder="Your Email" name="Subscribe" required="">
+                                <button class="btn1">
+                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="map text-center">
+                <h2>Our worldwide clients </h2>
+
+                <img src="images/map.jpg" alt="" class="img-responsive" />
+            </div>
+            <div class="section contact-bottom">
+                <div class="container">
+                    <div class="col-lg-6 col-md-6  contact-right-grid">
+                        <h6>send us a message</h6>
+                        <div class="agileits-main-right">
+                            <form action="#" method="post" class="agile_form">
+                                <label class="header">Name</label>
+                                <div class="icon1 s-name1">
+                                    <input placeholder=" " name="first name" type="text" required="">
+                                </div>
+                                <div class="icon2">
+                                    <label class="header">Email</label>
+                                    <input placeholder=" " name="Email" type="email" required="">
+                                </div>
+                                <label class="header">your message</label>
+                                <textarea class="_summary" required=""></textarea>
+                                <input type="submit" value="SEND">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6 contact-bot">
+                        <div class="contact-list">
+
+                            <h6> Our Objectives </h6>
+                            <ul class="cbot-list">
+                                {% for obj in objs %}
+                                    <li>
+                                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>{{obj.title}}
+                                        <p>{{obj.description}}</p>
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- contact -->
+        <!-- copy right -->
+        <p class="footer-class">© 2024 Business name. All Rights Reserved
+        </p>
+        <!-- //copy right -->
+        <!-- bootstrap-pop-up for login and register -->
+        <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Be a Member of Revenue
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <section>
+                        <div class="modal-body">
+                            <div class="loginf_module">
+                                <div class="module form-module">
+                                    <div class="toggle">
+                                        <i class="fa fa-times fa-pencil"></i>
+                                        <div class="tooltip">Click Me</div>
+                                    </div>
+                                    <div class="form">
+                                        <h3>Login to your account</h3>
+                                        <form action="#" method="post">
+                                            <input type="text" name="Username" placeholder="Username" required="">
+                                            <input type="password" name="Password" placeholder="Password" required="">
+                                            <input type="submit" value="Login">
+                                        </form>
+                                        <div class="cta">
+                                            <a href="#">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="form">
+                                        <h3>Create a new account</h3>
+                                        <form action="#" method="post">
+                                            <input type="text" name="Username" placeholder="Username" required="">
+                                            <input type="password" name="Password" placeholder="Password" required="">
+                                            <input type="email" name="Email" placeholder="Email address" required="">
+                                            <input type="text" name="Phone" placeholder="Phone Number" required="">
+                                            <input type="submit" value="Register">
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- //bootstrap-pop-up for login and register-->
+
+    </div>
+
+    <style>
+        .main-container {
+            padding-top: 10%;
+        }
+        @media only screen and (max-width: 760px){
+            .main-container {
+                padding-top: 40%;
+            }
+        }
+    </style>
+    <!-- main content end -->
+
+    <!-- js -->
+    <script src="{% static "main/js/jquery-2.2.3.min.js" %}"></script>
+    <!-- //js -->
+    <!-- about numscroller -->
+    <script src="{% static "main/js/numscroller-1.0.js" %}"></script>
+    <!-- //about numscroller -->
+    <!-- banner Slider starts Here -->
+    <script src="{% static "main/js/responsiveslides.min.js" %}"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 3
+            $("#slider3").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <!-- //banner slider script ends -->
+    <!-- sign in and signup pop up toggle script -->
+    <script>
+        $('.toggle').click(function () {
+            // Switches the Icon
+            $(this).children('i').toggleClass('fa-pencil');
+            // Switches the forms  
+            $('.form').animate({
+                height: "toggle",
+                'padding-top': 'toggle',
+                'padding-bottom': 'toggle',
+                opacity: "toggle"
+            }, "slow");
+        });
+    </script>
+    <!-- sign in and signup pop up toggle script -->
+    <!-- team desoslide-JavaScript -->
+    <script src="{% static "main/js/jquery.desoslide.js" %}"></script>
+    <script>
+        $('#demo1_thumbs').desoSlide({
+            main: {
+                container: '#demo1_main_image',
+                cssClass: 'img-responsive'
+            },
+            effect: 'sideFade',
+            caption: true
+        });
+    </script>
+    <!-- //team desoslide-JavaScript -->
+    <!-- Flexslider-js for-testimonials -->
+    <script src="{% static "main/js/jquery.flexisel.js" %}"></script>
+    <script>
+        $(window).load(function () {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 1,
+                animationSpeed: 1000,
+                autoPlay: false,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 1
+                    },
+                    tablet: {
+                        changePoint: 768,
+                        visibleItems: 1
+                    }
+                }
+            });
+
+        });
+    </script>
+    <!-- //Flexslider-js for-testimonials -->
+    <!-- start-smooth-scrolling -->
+    <script src="{% static "main/js/move-top.js" %}"></script>
+    <script src="{% static "main/js/easing.js" %}"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+            };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="{% static "main/js/SmoothScroll.min.js" %}"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- products smoothbox -->
+    <script src="{% static "main/js/smoothbox.jquery2.js" %}"></script>
+    <!-- //products smoothbox -->
+    <!-- Bootstrap core JavaScript
+ ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static "main/js/bootstrap.js" %}"></script>
+</body>
+
+</html>
